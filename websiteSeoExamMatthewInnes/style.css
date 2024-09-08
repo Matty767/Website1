@@ -1,0 +1,625 @@
+/* Global Resets */
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  overflow-x: hidden;
+  list-style: none;
+
+}
+
+/* Body Styles */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  overflow-x: hidden;
+  margin: 10px;
+}
+
+/* Navigation Starts */
+
+
+nav {
+  background-image: linear-gradient(to right, rgb(164, 239, 163), rgb(209, 154, 50));
+}
+
+/* logo */
+
+.logo {
+  position: absolute;
+  left: 15px;
+  color: white;
+  font-size: 1.2em;
+  line-height: 80px;
+  font-weight: bold;
+}
+
+/* nav bar **/
+
+nav ul {
+  float: right;
+  margin-right: 2px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 11px;
+  text-transform: uppercase;
+  z-index: 100;
+  padding-right: 10px;
+  margin-right: 10px;
+  position: relative;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+/* pseudo elements for underline */
+
+nav ul li a::before {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.5s ease-in-out;
+}
+
+nav ul li a:hover::before {
+  width: 100%;
+}
+
+a:hover {
+  color: green;
+}
+
+/* hamburger */
+
+.check_button {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 15px;
+  cursor: pointer;
+  display: none;
+  margin-top: 10px;
+}
+
+#check {
+  display: none;
+}
+
+/* nav end */
+
+
+/* article start */
+
+.article {
+  display: inline-block;
+  position: relative;
+  top: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: #ccdae52a;
+  justify-content: center;
+  background-attachment: fixed;
+  min-height: 70vh;
+  transition: background-image 0.5s ease-in-out;
+}
+
+.article h1 {
+  font-size: 2em;
+  color: white;
+  margin-top: 100px;
+}
+
+.article h3 {
+  font-size: 1.2em;
+  color: white;
+}
+
+.article h4 {
+  font-size: 1em;
+  color: white;
+}
+
+.button {
+  background-color: green;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 2px solid #333;
+  position: relative;
+  top: 130px;
+}
+
+.button:hover {
+  color: lightgreen;
+}
+
+/* article end */
+
+/*  the row images */
+.row {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+/* Column images */
+.column {
+  width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+}
+
+.column img {
+  object-fit: cover;
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+  /*  the row images end */
+
+/* Container Section start*/
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 5px;
+  text-align: center;
+  justify-content: center;
+  max-width: 100%;
+  height: auto;
+  background-color:white;
+}
+
+.container .item {
+  flex: 0 0 48%;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.container .item_3 {
+  flex: 0 0 90%;
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: center;
+  background-size: cover;
+
+}
+
+.container img {
+  width: 100%;
+  max-height: 450px;
+  flex-grow: 1;
+  object-fit: cover;
+  background-position: bottom;
+  position: relative;
+  top: 0;
+  padding: 20px;
+
+}
+
+.container .price {
+  font-weight: bold;
+  color: #333;
+}
+
+.container h6 {
+  font-size: 12px;
+  color: black;
+}
+
+/* Container Section end*/
+
+
+/* Newsletter Section  start*/
+.news-letter-container {
+  text-align: center;
+  margin-top: 20px;
+  background-color: rgb(233, 244, 247);
+}
+
+.news-letter-container h2 {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.news-letter-container form {
+  margin-top: 10px;
+}
+
+.news-letter-container input[type="email"],
+.news-letter-container button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.news-letter-container input[type="email"] {
+  width: 250px;
+}
+
+.news-letter-container button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Newsletter Section  end*/
+
+/* Testimonial Section start */
+.testimonial-container {
+  text-align: center;
+  margin-top: 20px;
+  background-color: #f1f1f1;
+}
+
+.testimonial-container h2 {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.testimonial-container .testimonial-description {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.testimonial-container .item {
+  margin-bottom: 20px;
+}
+
+.testimonial-container .price.author {
+  font-weight: bold;
+  color: #333;
+}
+
+.testimonial-container .location {
+  color: #333;
+  font-weight: 100;
+}
+
+.testimonial-container .testimonial {
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+/* Testimonial Section end */
+
+
+
+/* Footer Section start */
+
+footer {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-image: linear-gradient(to right, rgb(164, 239, 163), rgb(209, 154, 50));
+}
+
+/* Styles for footer content */
+.footer-section-address {
+  margin-bottom: 20px;
+}
+
+.contact-details h4 {
+  margin-bottom: 10px;
+}
+
+.social-links a {
+  color: #333;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #007bff;
+}
+
+.images-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.images-container .logo {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  justify-items: center;
+  position: relative;
+  
+}
+
+.images-container .tripadvisor-logo {
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+}
+
+.in-association-with {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #777;
+}
+
+/* h1-h6 Text styles start */
+
+h1 {
+  margin: 10px;
+  color: black;
+  letter-spacing: 2px;
+  font-weight: 600;
+  padding: 5px;
+}
+
+h2 {
+  margin: 10px;
+  padding: 5px;
+  color: black;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+
+
+
+h3 {
+  color: black;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 5px;
+
+}
+
+h4 {
+  padding: 5px;
+  color: black;
+  letter-spacing: .7px;
+  font-weight: 600;
+}
+
+
+
+h5 {
+  color: black;
+  letter-spacing: .4px;
+  font-weight: 600;
+  padding: 5px;
+}
+
+
+h6 {
+  color: black;
+  font-weight: bold;
+  padding: 5px;
+  letter-spacing: .4px;
+  
+}
+/* h1-h6 Text styles end */
+
+p {
+  padding: 5px;
+  margin: 10px;
+}
+
+/* contact Page */
+
+
+/* Style for form container */
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for form inputs */
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+/* Style for submit button */
+input[type="submit"] {
+  width: 100%;
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Style for submit button on hover */
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Style for error messages */
+.error {
+  color: #FF0000;
+}
+
+/* Reset default form margin */
+form {
+  margin: 0;
+  /* Reset margin to ensure full width */
+}
+
+/*media Query's for the hamburger */
+@media (max-width: 1139px) {
+  .check_button {
+    display: block;
+  }
+
+
+  /* the slide out nav start*/
+  ul {
+    position: fixed;
+    width: 96.5%;
+    height: 100vh;
+    top: 10px;
+    left: -110%;
+    text-align: center;
+    transition: all.5s;
+    top: 100px;
+    z-index: 100;
+    padding: 5px;
+    margin: 10px;
+    background-image: linear-gradient(to right, rgba(38, 241, 35, 0.942), rgba(193, 237, 16, 0.916));
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  a:hover,
+  a.active {
+    background: none;
+  }
+
+  #check:checked~ul {
+    left: 0;
+  }
+
+}
+
+/* the slide out nav end*/
+
+
+
+/* column styles start*/
+.column {
+  margin-bottom: 20px;
+}
+
+/* Media Queries */
+
+
+/* column styles */
+.column {
+  margin-bottom: 20px;
+}
+
+/* Media Queries for columns images  */
+
+/* Mobile Devices (1 Image) */
+@media screen and (max-width: 530px) {
+  .column {
+    width: 100%;
+  }
+}
+
+/* Tablets (2 Images) */
+@media screen and (min-width: 531px) and (max-width: 768px) {
+  .column {
+    width: calc(50% - 20px);
+  }
+}
+
+/* Larger Screens (3 Images) */
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  .column {
+    width: calc(33.33% - 20px);
+    /* Three columns on larger screens */
+  }
+}
+
+/* Even Larger Screens (4 Images) */
+@media screen and (min-width: 1024px) {
+  .column {
+    width: calc(25% - 20px);
+  }
+}
+
+/* Fourth Image Full Width (771px - 1023px) */
+@media screen and (min-width: 771px) and (max-width: 1023px) {
+  .column:nth-child(4) {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Media queries for column images ends */
+
+
+
+
+
+/* Media queries for responsive layout */
+@media (min-width: 768px) {
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  .footer-section-address {
+    margin-bottom: 0;
+  }
+
+  .images-container {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 992px) {
+
+  /*  adjustments for large screens */
+  footer {
+    padding: 30px;
+  }
+
+  .social-links {
+    order: -1;
+    /* Move social links to the left on large screens */
+  }
+}
+
